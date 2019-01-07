@@ -4,8 +4,6 @@
 #include <fstream>
 using namespace std;
 
-bool esManuel(int num);
-bool esRavenclaw(int num);
 bool primo(int num);
 bool isRorM(int num, char mode);
 
@@ -64,6 +62,7 @@ int main(){
 
 bool primo(int num){
   int cont=0;
+  bool ans;
   for(int i=2;i<=num/2;i++){
     if(num%i==0){
       cont++;
@@ -71,10 +70,11 @@ bool primo(int num){
     }
   }
   if(cont>0){
-    return false;
+    ans=false;
   }else{
-    return true;
+    ans=true;
   }
+  return ans;
 }
 
 bool isRorM(int num, char mode){
